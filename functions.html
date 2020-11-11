@@ -4,113 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Javascript Practice</title>
 </head>
 
 <body>
-  <script>
-    'use strict';
-
-    //Assignment #1//
-    const numericArray = [23, 345, 452345, 5, 452, 2345, 11, 12]
-    numericArray.sort((a, b) => a - b);
-    console.log('Smallest element in the array: ' + numericArray[0]);
-
-    //Assigment #2//
-    const numericArray2 = [23, 345, 452, 452, 452, 2345, 11, 12]
-    numericArray2.sort((a, b) => b - a);
-    console.log('Biggest element in the array: ' + numericArray2[0]);
-
-    //Assigment #3//
-    const numericArray3 = [10, 235223, 235223, 52225, 122, 4, 4]
-    let sum = 0;
-    for (let i = 0; i < numericArray3.length; i += 1) {
-      sum = sum + numericArray3[i];
-    };
-    console.log('Average of the array: ' + sum / numericArray3.length);
-
-    //Assigment #4//
-    const numericArray4 = [10, 235223, 235223, 52225, 122, 4, 4]
-    let sum2 = 0;
-    for (let i = 0; i < numericArray4.length; i += 1) {
-      sum2 = sum2 + numericArray4[i];
-    };
-    console.log('Sum of the array: ' + sum2);
-
-    //Assignment #5//
-    const numericArray5 = [10, 2, 235223, 235223, 52225, 122, 4, 4]
-    let numberOfEvenElements = 0;
-    for (let i = 0; i < numericArray5.length; i += 1) {
-      if (numericArray5[i] % 2 == 0) {
-        numberOfEvenElements = numberOfEvenElements + 1;
-      } else {
-      }
-    };
-    console.log('Number of even elements: ' + numberOfEvenElements);
-
-    //Assignment #6//
-    const numericArray6 = [1, 5, 23, 1244, 1232, 41311, 312, 3, 33156]
-    numericArray6.sort((a, b) => a - b);
-    console.log('Second smallest element in the array: ' + numericArray6[1]);
-
-    //Assigment #7//
-    const numericArray7 = [12, 13, 4, 35, 321, 232, 33]
-    numericArray7.sort((a, b) => b - a);
-    console.log('Third biggest element in the array: ' + numericArray7[2]);
-
-    //Assigment #8//
-    const numericArray8 = [10, 23, '2', 235223, 'John', undefined, 122, true]
-    let contains23 = 'no';
-    for (let i = 0; i < numericArray8.length; i += 1) {
-      if (numericArray8[i] === 23) {
-        contains23 = 'yes';
-        break;
-      } else {
-      }
-    };
-    console.log('Contains 23: ' + contains23);
-
-    //Assigment #9//
-    const numericArray9 = [1, 13, 4, 1, 3, 321, 23, 232, 33, 13]
-    numericArray9.sort((a, b) => a - b);
-
-    let searchTarget = function (array, target) {
-      let min = 0;
-      let max = array.length - 1;
-      let guess;
-
-      while (min <= max) {
-        guess = Math.floor((max + min) / 2);
-
-        if (array[guess] === target) {
-          return console.log('Contains 23');
-        }
-        else if (array[guess] < target) {
-          min = guess + 1;
-        }
-        else {
-          max = guess - 1;
-        }
-
-      }
-      return console.log('Does not contain 23');
-    };
-
-    searchTarget (numericArray9, 23);
-
-    //Assigment #10//
-    const numericArray10 = [10, 10, 23, 23, '2', 235223, 23, 'John', undefined, 122, true]
-    let contain23 = 0;
-    for (let i = 0; i < numericArray10.length; i += 1) {
-      if (numericArray10[i] === 23) {
-        contain23 = contain23 + 1;
-      } else {
-      }
-    };
-    console.log('Contains 23: ' + contain23 + ' times');
-
-
-  </script>
+  <div>
+    <p>Assignment #13</p>
+    <p id="sortedArray"></p> 
+    <form>
+      <label for="integer">Please enter a finite number:</label><br>
+      <input type="text" id="integer" name="integer"><br>      
+    </form>
+    <br>
+    <button type="button" onclick="checkInteger()">Submit</button>
+    <br>
+    <p id="result"></p>
+    <p id="fullArray"></p>
+  </div>  
+  <script src="js/main.js"></script>
 </body>
 
 </html>
