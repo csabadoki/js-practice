@@ -10,9 +10,8 @@ for (let i = 1; i < numericArray.length; i += 1) {
     minValue = numericArray[i];
   }
 };
-console.log('1. Smallest element in the array: ' + minValue);
-
-
+document.getElementById("Array1").innerHTML = ('Array: ' + numericArray);
+document.getElementById("Array1Mod").innerHTML = ('Smallest element in the array: ' + minValue);
 
 //Assigment #2//
 //Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb legnagyobb elemét!//
@@ -24,8 +23,8 @@ for (let i = 1; i < numericArray2.length; i += 1) {
     maxValue = numericArray2[i];
   }
 };
-console.log('2. Biggest element in the array: ' + maxValue);
-
+document.getElementById("Array2").innerHTML = ('Array: ' + numericArray2);
+document.getElementById("Array2Mod").innerHTML = ('Biggest element in the array: ' + maxValue);
 
 
 //Assigment #3//
@@ -36,7 +35,8 @@ let sum = 0;
 for (let i = 0; i < numericArray3.length; i += 1) {
   sum = sum + numericArray3[i];
 };
-console.log('3. Average of the array: ' + sum / numericArray3.length);
+document.getElementById("Array3").innerHTML = ('Array: ' + numericArray3);
+document.getElementById("Array3Mod").innerHTML = ('Average of the array: ' + sum / numericArray3.length);
 
 
 
@@ -48,7 +48,8 @@ let sum2 = 0;
 for (let i = 0; i < numericArray4.length; i += 1) {
   sum2 = sum2 + numericArray4[i];
 };
-console.log('4. Sum of the array: ' + sum2);
+document.getElementById("Array4").innerHTML = ('Array: ' + numericArray4);
+document.getElementById("Array4Mod").innerHTML = ('Sum of the array: ' + sum2);
 
 
 
@@ -63,7 +64,8 @@ for (let i = 0; i < numericArray5.length; i += 1) {
   } else {
   }
 };
-console.log('5. Number of even elements: ' + numberOfEvenElements);
+document.getElementById("Array5").innerHTML = ('Array: ' + numericArray5);
+document.getElementById("Array5Mod").innerHTML = ('5. Number of even elements: ' + numberOfEvenElements);
 
 
 //Assignment #6//
@@ -84,9 +86,8 @@ for (let i = 0; i < numericArray6.length; i += 1) {
     minSecondValueArray6 = numericArray6[i];
   }
 };
-console.log('6. Second smallest element in the array: ' + minSecondValueArray6);
-
-
+document.getElementById("Array6").innerHTML = ('Array: ' + numericArray6);
+document.getElementById("Array6Mod").innerHTML = ('Second smallest element in the array: ' + minSecondValueArray6);
 
 //Assigment #7//
 //Írasd ki egy tetszőleges elemszámú, csak egész számokat tartalmazó tömb harmadik legnagyobb elemét!
@@ -115,7 +116,8 @@ for (let i = 0; i < numericArray7.length; i += 1) {
   }
 };
 
-console.log('7. Third biggest element in the array: ' + maxThirdValue);
+document.getElementById("Array7").innerHTML = ('Array: ' + numericArray7);
+document.getElementById("Array7Mod").innerHTML = ('Third biggest element in the array: ' + maxThirdValue);
 
 //Assigment #8//
 ///Írd ki (igen vagy nem), hogy egy tetszőlegese elemszámú, bármilyen típusú elemeket tartalmazó tömb (feltételezzük, hogy beágyazott tömböt, objektumot, egyéb iterálható elemet nem tartalmaz) tartalmazza-e a 23-as számot! Használj lineáris keresést!
@@ -129,8 +131,8 @@ for (let i = 0; i < numericArray8.length; i += 1) {
   } else {
   }
 };
-console.log('8. Contains 23: ' + contains23);
-
+document.getElementById("Array8").innerHTML = ('Array: ' + numericArray8);
+document.getElementById("Array8Mod").innerHTML = ('Contains 23: ' + contains23);
 
 
 //Assigment #9//
@@ -138,6 +140,7 @@ console.log('8. Contains 23: ' + contains23);
 
 const numericArray9 = [1, 13, 4, 1, 3, 321, 23, 232, 33, 13];
 numericArray9.sort((a, b) => a - b);
+document.getElementById("Array9").innerHTML = ('Array: ' + numericArray8);
 
 let searchTarget = function (array, target) {
   let min = 0;
@@ -148,7 +151,7 @@ let searchTarget = function (array, target) {
     guess = Math.floor((max + min) / 2);
 
     if (array[guess] === target) {
-      return console.log('9. Contains 23');
+      return document.getElementById("Array9Mod").innerHTML = ('Contains 23');
     }
     else if (array[guess] < target) {
       min = guess + 1;
@@ -158,7 +161,7 @@ let searchTarget = function (array, target) {
     }
 
   }
-  return console.log('9. Does not contain 23');
+  return document.getElementById("Array9Mod").innerHTML = ('Does not contain 23');
 };
 
 searchTarget(numericArray9, 23);
@@ -177,7 +180,8 @@ for (let i = 0; i < numericArray10.length; i += 1) {
   } else {
   }
 };
-console.log('10. Contains 23: ' + contains1023 + ' times');
+document.getElementById("Array10").innerHTML = ('Array: ' + numericArray10);
+document.getElementById("Array10Mod").innerHTML = ('Contains 23: ' + contains1023 + ' times');
 
 
 // Assignment #11
@@ -199,14 +203,16 @@ function sortItems(array) {
   } while (swapped);
   return array;
 }
+document.getElementById("Array11").innerHTML = ('Array: ' + numericArray11);
 sortItems(numericArray11);
-console.log('11. Sorted array: ' + numericArray11);
+document.getElementById("Array11Mod").innerHTML = ('Sorted array: ' + numericArray11);
 
 
 // Assignment #12
 // Rendezd a javított buborékos rendezés algoritmus (nézz utána mi az, ha nem ismered) segítségével egy tetszőleges elemszámú, beágyazott tömb, és objektum kivételével bármilyen típusú elemeket tartalmazó tömb elemeit csökkenő sorrendbe! A nem szám típusú elemeket rakd a tömb végére az eredeti sorrendbe. Írasd ki a rendezett tömböt!
 
 let numericArray12 = [101, 10.4, 23, 25, '2', 2352, 123, 'John', 122, true, false];
+document.getElementById("Array12").innerHTML = ('Array: ' + numericArray12);
 let numericArrayTemp = [];
 let numericArrayTempNumbers = [];
 let nonNumberElements = 0;
@@ -243,8 +249,7 @@ function sortItems(array) {
 }
 sortItems(numericArrayTempNumbers);
 numericArray12 = numericArrayTempNumbers.concat(numericArrayTemp);
-
-console.log('12. Sorted array: ' + numericArray12);
+document.getElementById("Array12Mod").innerHTML = ('Sorted array: ' + numericArray12);
 
 
 
@@ -269,7 +274,7 @@ function sortItems(array) {
   return array;
 }
 sortItems(numericArray13);
- 
+
 document.getElementById("sortedArray").innerHTML = ('Sorted array: ' + numericArray13);
 
 let numericArray14 = numericArray13;
@@ -301,3 +306,34 @@ function checkInteger() {
   }
 }
 
+//Assignment #14
+// Adott egy tömb, mely azonos darabú egész számot, és szöveget tartalmaz véletlenszerű sorrendben. Rendezzük úgy a tömböt, hogy minden szám után egy string következzen! Írasd ki a rendezett tömböt!
+
+let array14 = ['big', 'small', 332, 12, 'next', 7];
+document.getElementById("Array14").innerHTML = ('Original array: ' + array14);
+
+let array14String = [];
+let array14Number = [];
+let array14Final = [];
+let numberTemp = 0;
+
+for (let i = 0; i < array14.length; i += 1) {
+  if (Number.isFinite(array14[i]) === false) {
+    array14String[numberTemp] = array14[i];
+    numberTemp = numberTemp + 1;
+  }
+};
+
+numberTemp = 0;
+for (let i = 0; i < array14.length; i += 1) {
+  if (Number.isFinite(array14[i]) === true) {
+    array14Number[numberTemp] = array14[i];
+    numberTemp = numberTemp + 1;
+  }
+};
+
+for (let i = 0; (i < array14.length / 2); i += 1) {
+  array14Final.push(array14Number[i],array14String[i]);
+};
+
+document.getElementById("Array14Mod").innerHTML = ('Final array: ' + array14Final);
