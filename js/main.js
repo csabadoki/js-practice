@@ -337,3 +337,47 @@ for (let i = 0; (i < array14.length / 2); i += 1) {
 };
 
 document.getElementById("Array14Mod").innerHTML = ('Final array: ' + array14Final);
+
+// Assignment #15
+// Adott egy tetszőleges pozitív egész számokat tartalmazó tömb. Válogassuk szét külön egy even (páros), és odd (páratlan) nevezetű tömbbe a páros, és páratlan számokat! Írjuk ki a 2 tömböt!
+
+const numericArray15 = [1, 13, 4, 1, 3, 321, 23, 232, 34, 13];
+document.getElementById("Array15").innerHTML = ('Array: ' + numericArray15);
+let numericArray15Odd = [];
+let numericArray15Even = [];
+
+for (let i = 0; i < numericArray15.length; i += 1) {
+  if (numericArray15[i] % 2 == 0) {
+    numericArray15Even.push(numericArray15[i]);
+  } else {
+    numericArray15Odd.push(numericArray15[i]);
+  }
+};
+
+document.getElementById("Array15Mod").innerHTML = ('Even numbers of the array: ' + numericArray15Even);
+document.getElementById("Array15Mod2").innerHTML = ('Odd numbers of the array: ' + numericArray15Odd);
+
+//Assigmnent #16
+// Adott két azonos elemszámú, csak egész számokat tartalmazó tömb. Külön tömbökbe készítsük el a két tömb: metszetét, unióját, különbségét, és descartes szorzatát. Írassuk ki az új tömböket!
+
+const finalArray1 = [1,3,14,91,88,100,32,9];
+const finalArray2 = [8,5,14,199,18,103,32,94];
+document.getElementById("Array16a").innerHTML = ('First array: ' + finalArray1);
+document.getElementById("Array16b").innerHTML = ('Second array: ' + finalArray2);
+
+let finalArrayIntersection = finalArray1.filter(x => finalArray2.includes(x));
+document.getElementById("Array16r1").innerHTML = ('Intersection: ' + finalArrayIntersection);
+
+let finalArrayUnion = [...new Set([...finalArray1, ...finalArray2])];
+document.getElementById("Array16r2").innerHTML = ('Union: ' + finalArrayUnion);
+
+let finalArrayDifference = finalArray1.filter(x => !finalArray2.includes(x));
+document.getElementById("Array16r3").innerHTML = ('Difference: ' + finalArrayDifference);
+
+let finalArrayCartesian = [];
+for (var i = 0; i < finalArray1.length; i++) {
+  for (var j = 0; j < finalArray2.length; j++) {
+      finalArrayCartesian.push(finalArray2[j] + ' ' + finalArray1[i]);
+  }
+}
+document.getElementById("Array16r4").innerHTML = ('Cartesian product: ' + finalArrayCartesian);
