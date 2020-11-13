@@ -140,7 +140,7 @@ document.getElementById("Array8Mod").innerHTML = ('Contains 23: ' + contains23);
 
 const numericArray9 = [1, 13, 4, 1, 3, 321, 23, 232, 33, 13];
 numericArray9.sort((a, b) => a - b);
-document.getElementById("Array9").innerHTML = ('Array: ' + numericArray8);
+document.getElementById("Array9").innerHTML = ('Array: ' + numericArray9);
 
 let searchTarget = function (array, target) {
   let min = 0;
